@@ -3,8 +3,6 @@ import { ThemeControls } from './components/ThemeControls';
 function App() {
   return (
     <div className="min-h-screen bg-[var(--color-bg-hard)] text-[var(--color-fg-primary)] flex flex-col font-sans transition-colors duration-200">
-      <ThemeControls />
-
       <header className="bg-[var(--color-bg-medium)] border-b border-[var(--color-bg-soft)] sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
           <h1 className="text-lg font-bold flex items-center gap-3">
@@ -15,6 +13,7 @@ function App() {
             />
             <span className="tracking-tight uppercase">Misconfiguration Helper</span>
           </h1>
+          <ThemeControls />
         </div>
       </header>
 

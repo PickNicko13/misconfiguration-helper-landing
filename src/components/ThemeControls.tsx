@@ -63,17 +63,17 @@ export function ThemeControls() {
   };
 
   return (
-    <div className="fixed top-1/2 -translate-y-1/2 right-4 z-[100] flex flex-col items-end">
+    <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-[var(--color-bg-soft)] text-[var(--color-fg-primary)] border border-[var(--color-bg-hard)] p-2 rounded-sm shadow-lg font-bold hover:bg-[var(--color-bg-hard)] transition-colors"
+        className="bg-[var(--color-bg-soft)] text-[var(--color-fg-primary)] border border-[var(--color-bg-hard)] px-2 py-1 rounded-sm shadow-md font-bold hover:bg-[var(--color-bg-hard)] transition-colors text-xs"
         aria-label="Toggle Accessibilty Menu"
       >
         AA
       </button>
 
       {isOpen && (
-        <div className="absolute top-0 right-12 w-64 bg-[var(--color-bg-medium)] border-2 border-[var(--color-fg-secondary)] shadow-2xl p-4 rounded-sm flex flex-col gap-4 -translate-y-1/2">
+        <div className="absolute top-full right-0 mt-2 w-64 bg-[var(--color-bg-medium)] border-2 border-[var(--color-fg-secondary)] shadow-2xl p-4 rounded-sm flex flex-col gap-4 z-[100]">
           <div>
             <h3 className="text-[var(--color-red)] font-bold mb-2 uppercase text-xs tracking-wider">Color Theme</h3>
             <div className="grid grid-cols-1 gap-1">
