@@ -15,21 +15,22 @@ function App() {
       </header>
 
       <main role="main" className="flex-grow">
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-16">
-          <div className="flex-1 space-y-6 text-center md:text-left">
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight">
-              Інструмент аналізу конфігураційних помилок
-            </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto md:mx-0">
-              Автоматизоване виявлення та виправлення вразливостей у конфігураційних файлах.
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
+          <article className="flex-1 space-y-6">
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
+              MCH: Сканер конфігураційних помилок
+            </h1>
+            <p className="text-xl text-gray-700 leading-relaxed max-w-2xl">
+              Інструмент командного рядка для автоматизованої ідентифікації помилок безпеки в мережевих системах.
+              Виявляє відкриті порти, Exposed файли та вразливості CORS.
               Бакалаврська робота.
             </p>
-          </div>
-          <div className="flex-1 w-full max-w-md md:max-w-full">
+          </article>
+          <div className="flex-1 w-full flex justify-center">
             <img
-              src="https://via.placeholder.com/600x400"
-              alt="Demonstration workflow dashboard"
-              className="rounded-lg shadow-xl w-full h-auto object-cover"
+              src="https://via.placeholder.com/800x400?text=Схема+роботи+сканера"
+              alt="Ілюстрація роботи інструменту MCH"
+              className="rounded-xl shadow-2xl w-full max-w-lg object-cover"
             />
           </div>
         </section>
