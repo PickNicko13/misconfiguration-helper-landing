@@ -54,6 +54,19 @@
 }
 
 :root {
+  --text-scale: 1;
+
+  /* Override Tailwind v4 type variables with dynamic scale */
+  --text-xs: calc(0.75rem * var(--text-scale));
+  --text-sm: calc(0.875rem * var(--text-scale));
+  --text-base: calc(1rem * var(--text-scale));
+  --text-lg: calc(1.125rem * var(--text-scale));
+  --text-xl: calc(1.25rem * var(--text-scale));
+  --text-2xl: calc(1.5rem * var(--text-scale));
+  --text-3xl: calc(1.875rem * var(--text-scale));
+  --text-4xl: calc(2.25rem * var(--text-scale));
+  --text-5xl: calc(3rem * var(--text-scale));
+
   /* Default: Gruvbox Dark Medium */
   --bg-hard: #1d2021;
   --bg-medium: #282828;
@@ -68,6 +81,10 @@
   --gruv-aqua: #689d6a;
   --gruv-orange: #d65d0e;
   --gruv-gray: #a89984;
+}
+
+html.text-large {
+  --text-scale: 1.25;
 }
 
 [data-theme="dark-soft"] {
@@ -155,9 +172,4 @@ body.high-contrast {
 
 .font-dyslexic {
   font-family: var(--font-dyslexic) !important;
-}
-
-.text-large {
-  font-size: 1.25rem;
-  line-height: 1.6;
 }
