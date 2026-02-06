@@ -21,7 +21,7 @@ function App() {
       <main role="main" className="flex-grow">
         <section className="max-w-6xl mx-auto px-4 py-12 md:py-20 flex flex-col md:flex-row items-center gap-10">
           <article className="flex-1 space-y-4">
-            <h1 className="text-3xl md:text-5xl font-black tracking-tighter text-[var(--color-red)] leading-none uppercase">
+            <h1 className="text-3xl md:text-5xl font-black tracking-tight text-[var(--color-red)] leading-tight uppercase">
               MCH: Сканер конфігураційних помилок
             </h1>
             <p className="text-lg text-[var(--color-fg-secondary)] leading-snug max-w-xl">
@@ -33,7 +33,7 @@ function App() {
           <div className="flex-1 w-full flex justify-center">
             <div className="border-4 border-[var(--color-bg-soft)] p-2 bg-[var(--color-bg-medium)] shadow-[8px_8px_0_0_var(--color-bg-soft)]">
               <img
-                src="https://via.placeholder.com/800x400?text=Scan+Workflow"
+                src="example.webp"
                 alt="Процес сканування"
                 loading="lazy"
                 className="w-full max-w-lg object-cover grayscale opacity-80"
@@ -43,7 +43,7 @@ function App() {
         </section>
 
         <section className="bg-[var(--color-bg-medium)] py-12 border-y border-[var(--color-bg-soft)]">
-          <div className="max-w-5xl mx-auto px-4 space-y-12">
+          <div className="max-w-6xl mx-auto px-4 space-y-12">
 
             <article>
               <h2 className="text-xl font-bold text-[var(--color-orange)] mb-4 uppercase tracking-widest border-l-4 border-[var(--color-orange)] pl-3">
@@ -112,7 +112,7 @@ function App() {
                 <h2 className="text-xl font-bold text-[var(--color-aqua)] mb-4 uppercase tracking-widest">
                   🛠️ Методологія
                 </h2>
-                <ul className="text-xs space-y-1 font-bold">
+                <ul className="space-y-1 font-bold">
                   <li className="flex justify-between border-b border-[var(--color-bg-soft)] pb-1">
                     <span>Mова</span>
                     <span className="text-[var(--color-fg-primary)]">Python 3.10+</span>
@@ -135,7 +135,7 @@ function App() {
                 <h2 className="text-xl font-bold text-[var(--color-green)] mb-4 uppercase tracking-widest">
                   📊 Результати
                 </h2>
-                <ul className="text-xs space-y-2">
+                <ul className="space-y-2">
                   <li className="flex gap-2">
                     <span className="text-[var(--color-green)]">■</span>
                     <span>Гнучкий CLI інструмент з модульною структурою</span>
