@@ -140,7 +140,8 @@
   --gruv-orange: #af3a03;
 }
 
-.high-contrast {
+html.high-contrast,
+body.high-contrast {
   --fg-primary: #ffffff !important;
   --fg-secondary: #ffff00 !important;
   --bg-hard: #000000 !important;
