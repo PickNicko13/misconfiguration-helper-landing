@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 
 const themes = [
-  { id: 'dark-medium', name: 'Dark Medium (Default)' },
   { id: 'dark-soft', name: 'Dark Soft' },
-  { id: 'dark-hard', name: 'Dark Hard' },
-  { id: 'light-medium', name: 'Light Medium' },
   { id: 'light-soft', name: 'Light Soft' },
+  { id: 'dark-medium', name: 'Dark Med.' },
+  { id: 'light-medium', name: 'Light Med.' },
+  { id: 'dark-hard', name: 'Dark Hard' },
   { id: 'light-hard', name: 'Light Hard' },
 ];
 
@@ -85,7 +85,7 @@ export function ThemeControls() {
     <div className="relative" ref={menuRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-[var(--color-bg-soft)] text-[var(--color-fg-primary)] border border-[var(--color-bg-hard)] px-2 py-1 rounded-sm shadow-md font-bold hover:bg-[var(--color-bg-hard)] transition-colors text-xs"
+        className="bg-[var(--color-bg-soft)] text-[var(--color-fg-primary)] border border-[var(--color-bg-hard)] px-4 py-2 rounded-sm shadow-md font-black hover:bg-[var(--color-bg-hard)] transition-colors text-base cursor-pointer"
         aria-label="Toggle Accessibilty Menu"
       >
         AA
@@ -95,12 +95,12 @@ export function ThemeControls() {
         <div className="absolute top-full right-0 mt-2 w-64 bg-[var(--color-bg-medium)] border-2 border-[var(--color-fg-secondary)] shadow-2xl p-4 rounded-sm flex flex-col gap-4 z-[100]">
           <div>
             <h3 className="text-[var(--color-red)] font-bold mb-2 uppercase text-xs tracking-wider">Color Theme</h3>
-            <div className="grid grid-cols-1 gap-1">
+            <div className="grid grid-cols-2 gap-1">
               {themes.map(t => (
                 <button
                   key={t.id}
                   onClick={() => handleThemeChange(t.id)}
-                  className={`text-left px-2 py-1 text-sm rounded-sm ${currentTheme === t.id ? 'bg-[var(--color-blue)] text-[var(--color-bg-hard)] font-bold' : 'text-[var(--color-fg-primary)] hover:bg-[var(--color-bg-hard)]'}`}
+                  className={`text-left px-2 py-1.5 text-xs leading-tight rounded-sm cursor-pointer transition-colors ${currentTheme === t.id ? 'bg-[var(--color-blue)] text-[var(--color-bg-hard)] font-bold' : 'text-[var(--color-fg-primary)] hover:bg-[var(--color-bg-hard)]'}`}
                 >
                   {t.name}
                 </button>
@@ -129,7 +129,10 @@ export function ThemeControls() {
                 />
                 Enlarged Text
               </label>
-              <label className="flex items-center gap-2 cursor-pointer text-[var(--color-fg-primary)] text-sm">
+              <label
+                className="flex items-center gap-2 cursor-pointer text-[var(--color-fg-primary)] text-sm"
+                style={{ fontFamily: 'var(--font-dyslexic)' }}
+              >
                 <input
                   type="checkbox"
                   checked={isDyslexic}
