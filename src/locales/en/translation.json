@@ -1,0 +1,90 @@
+{
+    "header": {
+        "title": "Misconfiguration Helper"
+    },
+    "hero": {
+        "title": "MCH: Configuration Error Scanner",
+        "description": "A command-line tool for automated identification of security misconfigurations in network systems. Detects open ports, exposed files, and CORS vulnerabilities.",
+        "subtitle": "Bachelor's Thesis.",
+        "imageAlt": "Scanning Process"
+    },
+    "keywords": {
+        "title": "Keywords",
+        "list": [
+            "cybersecurity",
+            "Python",
+            "CLI",
+            "misconfiguration",
+            "vulnerability scanning",
+            "CORS",
+            "port scanning",
+            "fuzzing"
+        ]
+    },
+    "relevance": {
+        "title": "Relevance",
+        "paragraph1": "The growing number of cyberattacks due to misconfigured systems has become one of the critical problems of modern IT infrastructure. According to OWASP reports, Security Misconfiguration consistently ranks in the top 10 vulnerabilities.",
+        "paragraph2": "Existing tools are often too complex or resource-intensive. Developing a modular tool will enable rapid vulnerability detection at early stages."
+    },
+    "goal": {
+        "title": "Research Goal",
+        "text": "Develop a convenient, extensible tool for automated detection and documentation of common configuration errors in web servers and network applications."
+    },
+    "tasks": {
+        "title": "Main Objectives",
+        "list": [
+            "Analysis of OWASP error types",
+            "Modular port scanner",
+            "File fuzzing mechanism",
+            "CORS vulnerability checking",
+            "Command-line interface (CLI)"
+        ]
+    },
+    "methodology": {
+        "title": "🛠️ Methodology",
+        "language": "Language",
+        "languageValue": "Python 3.10+",
+        "cliFramework": "CLI Framework",
+        "cliFrameworkValue": "Typer",
+        "httpClients": "HTTP Clients",
+        "httpClientsValue": "httpx (AsyncIO)",
+        "library": "Library",
+        "libraryValue": "Rich"
+    },
+    "results": {
+        "title": "📊 Results",
+        "list": [
+            "Flexible CLI tool with modular structure",
+            "Automated security audit",
+            "Detailed reporting for administrators"
+        ]
+    },
+    "materials": {
+        "title": "Materials",
+        "githubLink": "GitHub Repository"
+    },
+    "author": {
+        "label": "Author",
+        "name": "Mykyta Yaremenko",
+        "group": "Group IN-26-3"
+    },
+    "footer": {
+        "university": "Sumy State University",
+        "copyright": "© 2026 / Bachelor's Thesis"
+    },
+    "theme": {
+        "colorTheme": "Color Theme",
+        "accessibility": "Accessibility",
+        "highContrast": "High Contrast",
+        "enlargedText": "Enlarged Text",
+        "dyslexiaFont": "Dyslexia Friendly Font",
+        "themes": {
+            "darkSoft": "Dark Soft",
+            "lightSoft": "Light Soft",
+            "darkMed": "Dark Med.",
+            "lightMed": "Light Med.",
+            "darkHard": "Dark Hard",
+            "lightHard": "Light Hard"
+        }
+    }
+}
