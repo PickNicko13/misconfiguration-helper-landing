@@ -1,0 +1,90 @@
+{
+    "header": {
+        "title": "Misconfiguration Helper"
+    },
+    "hero": {
+        "title": "MCH: Сканер конфігураційних помилок",
+        "description": "Інструмент командного рядка для автоматизованої ідентифікації помилок безпеки в мережевих системах. Виявляє відкриті порти, Exposed файли та вразливості CORS.",
+        "subtitle": "Бакалаврська робота.",
+        "imageAlt": "Процес сканування"
+    },
+    "keywords": {
+        "title": "Ключові слова",
+        "list": [
+            "кібербезпека",
+            "Python",
+            "CLI",
+            "misconfiguration",
+            "vulnerability scanning",
+            "CORS",
+            "port scanning",
+            "fuzzing"
+        ]
+    },
+    "relevance": {
+        "title": "Актуальність",
+        "paragraph1": "Зростання кількості кібератак через неправильно налаштовані системи стає однією з критичних проблем сучасної IT-інфраструктури. Згідно з звітами OWASP, Security Misconfiguration стабільно входить до топ-10 вразливостей.",
+        "paragraph2": "Існуючі інструменти часто є занадто складними або ресурсномісткими. Розробка модульного інструменту дозволить оперативно виявляти вразливості на ранніх етапах."
+    },
+    "goal": {
+        "title": "Мета дослідження",
+        "text": "Розробити зручний, розширюваний інструмент для автоматизованого виявлення та документування типових помилок конфігурації у веб-серверах та мережевих додатках."
+    },
+    "tasks": {
+        "title": "Основні завдання",
+        "list": [
+            "Аналіз типів помилок OWASP",
+            "Модульний сканер портів",
+            "Механізм Fuzzing файлів",
+            "Перевірка вразливостей CORS",
+            "Інтерфейс командного рядка (CLI)"
+        ]
+    },
+    "methodology": {
+        "title": "🛠️ Методологія",
+        "language": "Мова",
+        "languageValue": "Python 3.10+",
+        "cliFramework": "CLI Framework",
+        "cliFrameworkValue": "Typer",
+        "httpClients": "HTTP Clients",
+        "httpClientsValue": "httpx (AsyncIO)",
+        "library": "Library",
+        "libraryValue": "Rich"
+    },
+    "results": {
+        "title": "📊 Результати",
+        "list": [
+            "Гнучкий CLI інструмент з модульною структурою",
+            "Автоматизований аудит безпеки",
+            "Детальна звітність для адміністраторів"
+        ]
+    },
+    "materials": {
+        "title": "Матеріали",
+        "githubLink": "GitHub Репозиторій"
+    },
+    "author": {
+        "label": "Автор роботи",
+        "name": "Яременко Микита",
+        "group": "Група ІН-26-3"
+    },
+    "footer": {
+        "university": "Сумський Державний Університет",
+        "copyright": "© 2026 / Бакалаврська робота"
+    },
+    "theme": {
+        "colorTheme": "Кольорова Тема",
+        "accessibility": "Доступність",
+        "highContrast": "Високий Контраст",
+        "enlargedText": "Збільшений Текст",
+        "dyslexiaFont": "Dyslexia Friendly Font",
+        "themes": {
+            "darkSoft": "Dark Soft",
+            "lightSoft": "Light Soft",
+            "darkMed": "Dark Med.",
+            "lightMed": "Light Med.",
+            "darkHard": "Dark Hard",
+            "lightHard": "Light Hard"
+        }
+    }
+}
