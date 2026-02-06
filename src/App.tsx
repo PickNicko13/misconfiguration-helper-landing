@@ -151,11 +151,11 @@ function App() {
       <footer className="bg-gray-900 text-gray-400 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-4 text-center text-sm">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/e/e0/%D0%A1%D1%83%D0%9C%D0%94%D0%A3.png"
+            src="/SSU.png"
             alt="Логотип СумДУ"
             className="h-16 opacity-80 hover:opacity-100 transition-opacity"
           />
-          <p>&copy; 2026 Misconfiguration Helper. Бакалаврська робота.</p>
+          <p>2026 Mykyta Yaremenko. MIT License.</p>
         </div>
       </footer>
     </div>
