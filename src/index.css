@@ -1,1 +1,196 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/Inter/woff/InterVariable.woff2") format("woff2-variations"),
+    url("/fonts/Inter/woff/InterVariable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  src: url("/fonts/Inter/woff/InterVariable-Italic.woff2") format("woff2-variations"),
+    url("/fonts/Inter/woff/InterVariable-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/OpenDyslexic/OpenDyslexic-Regular.otf") format("opentype");
+  unicode-range: U+0000-00FF, U+0100-017F, U+0400-04FF;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+  src: url("/fonts/OpenDyslexic/OpenDyslexic-Italic.otf") format("opentype");
+  unicode-range: U+0000-00FF, U+0100-017F, U+0400-04FF;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/OpenDyslexic/OpenDyslexic-Bold.otf") format("opentype");
+  unicode-range: U+0000-00FF, U+0100-017F, U+0400-04FF;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+  src: url("/fonts/OpenDyslexic/OpenDyslexic-BoldItalic.otf") format("opentype");
+  unicode-range: U+0000-00FF, U+0100-017F, U+0400-04FF;
+}
+
+@theme {
+  --color-bg-hard: var(--bg-hard);
+  --color-bg-medium: var(--bg-medium);
+  --color-bg-soft: var(--bg-soft);
+  --color-fg-primary: var(--fg-primary);
+  --color-fg-secondary: var(--fg-secondary);
+  --color-red: var(--gruv-red);
+  --color-green: var(--gruv-green);
+  --color-yellow: var(--gruv-yellow);
+  --color-blue: var(--gruv-blue);
+  --color-purple: var(--gruv-purple);
+  --color-aqua: var(--gruv-aqua);
+  --color-orange: var(--gruv-orange);
+  --color-gray: var(--gruv-gray);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-dyslexic: "OpenDyslexic", "Comic Sans MS", cursive, sans-serif;
+}
+
+:root {
+  --text-scale: 1;
+
+  /* Override Tailwind v4 type variables with dynamic scale */
+  --text-xs: calc(0.75rem * var(--text-scale));
+  --text-sm: calc(0.875rem * var(--text-scale));
+  --text-base: calc(1rem * var(--text-scale));
+  --text-lg: calc(1.125rem * var(--text-scale));
+  --text-xl: calc(1.25rem * var(--text-scale));
+  --text-2xl: calc(1.5rem * var(--text-scale));
+  --text-3xl: calc(1.875rem * var(--text-scale));
+  --text-4xl: calc(2.25rem * var(--text-scale));
+  --text-5xl: calc(3rem * var(--text-scale));
+
+  /* Default: Gruvbox Dark Medium */
+  --bg-hard: #1d2021;
+  --bg-medium: #282828;
+  --bg-soft: #32302f;
+  --fg-primary: #ebdbb2;
+  --fg-secondary: #d5c4a1;
+  --gruv-red: #cc241d;
+  --gruv-green: #98971a;
+  --gruv-yellow: #d79921;
+  --gruv-blue: #458588;
+  --gruv-purple: #b16286;
+  --gruv-aqua: #689d6a;
+  --gruv-orange: #d65d0e;
+  --gruv-gray: #a89984;
+}
+
+html.text-large {
+  --text-scale: 1.25;
+}
+
+[data-theme="dark-soft"] {
+  --bg-hard: #32302f;
+  --bg-medium: #32302f;
+  --bg-soft: #3c3836;
+  --fg-primary: #ebdbb2;
+  --fg-secondary: #d5c4a1;
+}
+
+[data-theme="dark-medium"] {
+  --bg-hard: #1d2021;
+  --bg-medium: #282828;
+  --bg-soft: #32302f;
+  --fg-primary: #ebdbb2;
+  --fg-secondary: #d5c4a1;
+}
+
+[data-theme="dark-hard"] {
+  --bg-hard: #1d2021;
+  --bg-medium: #1d2021;
+  --bg-soft: #282828;
+  --fg-primary: #fbf1c7;
+  --fg-secondary: #ebdbb2;
+}
+
+[data-theme="light-soft"] {
+  --bg-hard: #f2e5bc;
+  --bg-medium: #f9f5d7;
+  --bg-soft: #fbf1c7;
+  --fg-primary: #3c3836;
+  --fg-secondary: #504945;
+  --gruv-red: #9d0006;
+  --gruv-green: #79740e;
+  --gruv-yellow: #b57614;
+  --gruv-blue: #076678;
+  --gruv-purple: #8f3f71;
+  --gruv-aqua: #427b58;
+  --gruv-orange: #af3a03;
+  --gruv-gray: #7c6f64;
+}
+
+[data-theme="light-medium"] {
+  --bg-hard: #f9f5d7;
+  --bg-medium: #fbf1c7;
+  --bg-soft: #ebdbb2;
+  --fg-primary: #3c3836;
+  --fg-secondary: #504945;
+  --gruv-red: #cc241d;
+  --gruv-green: #98971a;
+  --gruv-yellow: #d79921;
+  --gruv-blue: #458588;
+  --gruv-purple: #b16286;
+  --gruv-aqua: #689d6a;
+  --gruv-orange: #d65d0e;
+}
+
+[data-theme="light-hard"] {
+  --bg-hard: #f9f5d7;
+  --bg-medium: #f9f5d7;
+  --bg-soft: #fbf1c7;
+  --fg-primary: #282828;
+  --fg-secondary: #3c3836;
+  --gruv-red: #9d0006;
+  --gruv-green: #79740e;
+  --gruv-yellow: #b57614;
+  --gruv-blue: #076678;
+  --gruv-purple: #8f3f71;
+  --gruv-aqua: #427b58;
+  --gruv-orange: #af3a03;
+}
+
+html.high-contrast,
+body.high-contrast {
+  --fg-primary: #ffffff !important;
+  --fg-secondary: #ffff00 !important;
+  --bg-hard: #000000 !important;
+  --bg-medium: #000000 !important;
+  --bg-soft: #1a1a1a !important;
+  --gruv-red: #ff0000 !important;
+  --gruv-green: #00ff00 !important;
+  --gruv-yellow: #ffff00 !important;
+  --gruv-blue: #00ffff !important;
+}
+
+html.font-dyslexic,
+html.font-dyslexic * {
+  font-family: var(--font-dyslexic) !important;
+}
