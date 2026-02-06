@@ -1,15 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
-
-const themes = [
-  { id: 'dark-soft', name: 'Dark Soft' },
-  { id: 'light-soft', name: 'Light Soft' },
-  { id: 'dark-medium', name: 'Dark Med.' },
-  { id: 'light-medium', name: 'Light Med.' },
-  { id: 'dark-hard', name: 'Dark Hard' },
-  { id: 'light-hard', name: 'Light Hard' },
-];
+import { useTranslation } from 'react-i18next';
 
 export function ThemeControls() {
+  const { t } = useTranslation();
+
+  const themes = [
+    { id: 'dark-soft', name: t('theme.themes.darkSoft') },
+    { id: 'light-soft', name: t('theme.themes.lightSoft') },
+    { id: 'dark-medium', name: t('theme.themes.darkMed') },
+    { id: 'light-medium', name: t('theme.themes.lightMed') },
+    { id: 'dark-hard', name: t('theme.themes.darkHard') },
+    { id: 'light-hard', name: t('theme.themes.lightHard') },
+  ];
   const [currentTheme, setCurrentTheme] = useState('dark-medium');
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isDyslexic, setIsDyslexic] = useState(false);
@@ -94,7 +96,7 @@ export function ThemeControls() {
       {isOpen && (
         <div className="absolute top-full right-0 mt-2 w-64 bg-[var(--color-bg-medium)] border-2 border-[var(--color-fg-secondary)] shadow-2xl p-4 rounded-sm flex flex-col gap-4 z-[100]">
           <div>
-            <h3 className="text-[var(--color-red)] font-bold mb-2 uppercase tracking-wider">Color Theme</h3>
+            <h3 className="text-[var(--color-red)] font-bold mb-2 uppercase tracking-wider">{t('theme.colorTheme')}</h3>
             <div className="grid grid-cols-2 gap-1">
               {themes.map(t => (
                 <button
@@ -109,7 +111,7 @@ export function ThemeControls() {
           </div>
 
           <div className="border-t border-[var(--color-bg-hard)] pt-4">
-            <h3 className="text-[var(--color-yellow)] font-bold mb-2 uppercase tracking-wider">Accessibility</h3>
+            <h3 className="text-[var(--color-yellow)] font-bold mb-2 uppercase tracking-wider">{t('theme.accessibility')}</h3>
             <div className="space-y-2">
               <label
                 className="flex items-center gap-2 cursor-pointer text-[var(--color-fg-primary)] text-sm"
@@ -121,7 +123,7 @@ export function ThemeControls() {
                   onChange={toggleContrast}
                   className="accent-[var(--color-red)]"
                 />
-                High Contrast
+                {t('theme.highContrast')}
               </label>
               <label
                 className="flex items-center gap-2 cursor-pointer text-[var(--color-fg-primary)] text-sm"
@@ -133,7 +135,7 @@ export function ThemeControls() {
                   onChange={toggleLargeText}
                   className="accent-[var(--color-green)]"
                 />
-                Enlarged Text
+                {t('theme.enlargedText')}
               </label>
               <label
                 className="flex items-center gap-2 cursor-pointer text-[var(--color-fg-primary)] text-sm"
@@ -145,7 +147,7 @@ export function ThemeControls() {
                   onChange={toggleDyslexic}
                   className="accent-[var(--color-blue)]"
                 />
-                Dyslexia Friendly Font
+                {t('theme.dyslexiaFont')}
               </label>
             </div>
           </div>
