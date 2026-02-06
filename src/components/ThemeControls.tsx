@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const themes = [
   { id: 'dark-medium', name: 'Dark Medium (Default)' },
@@ -15,6 +15,25 @@ export function ThemeControls() {
   const [isDyslexic, setIsDyslexic] = useState(false);
   const [isLargeText, setIsLargeText] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     // Load persisted settings
@@ -63,7 +82,7 @@ export function ThemeControls() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative" ref={menuRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="bg-[var(--color-bg-soft)] text-[var(--color-fg-primary)] border border-[var(--color-bg-hard)] px-2 py-1 rounded-sm shadow-md font-bold hover:bg-[var(--color-bg-hard)] transition-colors text-xs"
