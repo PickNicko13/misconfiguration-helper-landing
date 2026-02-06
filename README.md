@@ -9,6 +9,13 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - TypeScript
 - Tailwind CSS v4
 
+## Stage 2: SEO & Accessibility
+
+- Semantic HTML Structure
+- SEO Meta Tags & Open Graph
+- Desktop-first Responsive Design
+- Accessibility (ARIA, Alt text)
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
