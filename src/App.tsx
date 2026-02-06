@@ -1,4 +1,5 @@
 import { ThemeControls } from './components/ThemeControls';
+import { SSULogo } from './components/SSULogo';
 
 function App() {
   return (
@@ -6,11 +7,7 @@ function App() {
       <header className="bg-[var(--color-bg-medium)] border-b border-[var(--color-bg-soft)] sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
           <h1 className="text-lg font-bold flex items-center gap-3">
-            <img
-              src="/SSU.svg"
-              alt="MCH Logo"
-              className="w-8 h-8 filter grayscale brightness-125"
-            />
+            <SSULogo className="w-8 h-8" />
             <span className="tracking-tight uppercase">Misconfiguration Helper</span>
           </h1>
           <ThemeControls />
@@ -178,11 +175,7 @@ function App() {
 
       <footer className="bg-[var(--color-bg-hard)] border-t border-[var(--color-bg-soft)] py-10">
         <div className="max-w-6xl mx-auto px-4 flex flex-col items-center gap-6">
-          <img
-            src="/SSU.svg"
-            alt="SumDU Logo"
-            className="h-12 grayscale brightness-150 opacity-40 hover:opacity-100 transition-all"
-          />
+          <SSULogo className="w-24 h-12 opacity-40 hover:opacity-100 transition-all cursor-help" />
           <div className="text-center space-y-1">
             <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[var(--color-gray)]">
               Сумський Державний Університет
