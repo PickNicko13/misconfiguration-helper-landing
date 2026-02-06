@@ -62,6 +62,37 @@ function App() {
               </p>
             </article>
 
+            <div className="grid md:grid-cols-2 gap-12">
+              <article>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Мета дослідження</h2>
+                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 h-full">
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Розробити зручний, розширюваний інструмент для автоматизованого виявлення та документування типових помилок конфігурації (Security Misconfiguration) у веб-серверах та мережевих додатках.
+                  </p>
+                </div>
+              </article>
+
+              <article>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Основні завдання</h2>
+                <ul className="space-y-4">
+                  {[
+                    "Проаналізувати найпоширеніші типи помилок конфігурації (згідно OWASP).",
+                    "Реалізувати модульний сканер портів та сервісів.",
+                    "Розробити механізм виявлення Exposed файлів та директорій (Fuzzing).",
+                    "Імплементувати перевірку вразливостей CORS (ACAO headers).",
+                    "Створити зручний інтерфейс командного рядка (CLI) та систему звітності."
+                  ].map((task, index) => (
+                    <li key={index} className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm">
+                        {index + 1}
+                      </div>
+                      <span className="text-gray-700 pt-1">{task}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+
           </div>
         </section>
       </main>
