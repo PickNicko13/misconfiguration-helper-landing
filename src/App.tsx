@@ -17,7 +17,7 @@ function App() {
       <main role="main" className="flex-grow">
         <section className="max-w-6xl mx-auto px-4 py-12 md:py-20 flex flex-col md:flex-row items-center gap-10">
           <article className="flex-1 space-y-4">
-            <h1 className="text-3xl md:text-5xl font-black tracking-tight text-[var(--color-red)] leading-tight uppercase">
+            <h1 className="text-3xl md:text-5xl font-black text-[var(--color-red)] leading-tight uppercase">
               MCH: Сканер конфігураційних помилок
             </h1>
             <p className="text-lg text-[var(--color-fg-secondary)] leading-snug max-w-xl">
@@ -59,7 +59,7 @@ function App() {
                 <h2 className="text-xl font-bold text-[var(--color-yellow)] mb-4 uppercase tracking-widest border-l-4 border-[var(--color-yellow)] pl-3">
                   Актуальність
                 </h2>
-                <div className="space-y-3 text-sm leading-relaxed">
+                <div className="space-y-3 leading-relaxed">
                   <p>
                     Зростання кількості кібератак через неправильно налаштовані системи стає однією з критичних проблем сучасної IT-інфраструктури.
                     Згідно з звітами OWASP, Security Misconfiguration стабільно входить до топ-10 вразливостей.
@@ -76,7 +76,7 @@ function App() {
                   Мета дослідження
                 </h2>
                 <div className="bg-[var(--color-bg-soft)] p-5 border border-[var(--color-bg-hard)]">
-                  <p className="text-sm text-[var(--color-fg-primary)] leading-normal italic">
+                  <p className="text-[var(--color-fg-primary)] leading-normal italic">
                     Розробити зручний, розширюваний інструмент для автоматизованого виявлення та документування типових помилок конфігурації у веб-серверах та мережевих додатках.
                   </p>
                 </div>
@@ -97,7 +97,7 @@ function App() {
                 ].map((task, index) => (
                   <div key={index} className="flex items-center gap-3 bg-[var(--color-bg-hard)] p-3 border border-[var(--color-bg-soft)]">
                     <span className="text-[var(--color-purple)] font-black text-lg">0{index + 1}</span>
-                    <span className="text-xs font-bold leading-tight">{task}</span>
+                    <span className="font-bold leading-tight">{task}</span>
                   </div>
                 ))}
               </div>
