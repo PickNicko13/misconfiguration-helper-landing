@@ -31,8 +31,8 @@ export function ThemeControls() {
     // Apply settings
     document.documentElement.setAttribute('data-theme', savedTheme);
     document.documentElement.classList.toggle('high-contrast', savedContrast);
-    document.body.classList.toggle('font-dyslexic', savedDyslexic);
-    document.body.classList.toggle('text-large', savedLargeText);
+    document.documentElement.classList.toggle('font-dyslexic', savedDyslexic);
+    document.documentElement.classList.toggle('text-large', savedLargeText);
   }, []);
 
   const handleThemeChange = (themeId: string) => {
@@ -52,14 +52,14 @@ export function ThemeControls() {
     const newState = !isDyslexic;
     setIsDyslexic(newState);
     localStorage.setItem('dyslexicFont', String(newState));
-    document.body.classList.toggle('font-dyslexic', newState);
+    document.documentElement.classList.toggle('font-dyslexic', newState);
   };
 
   const toggleLargeText = () => {
     const newState = !isLargeText;
     setIsLargeText(newState);
     localStorage.setItem('largeText', String(newState));
-    document.body.classList.toggle('text-large', newState);
+    document.documentElement.classList.toggle('text-large', newState);
   };
 
   return (
