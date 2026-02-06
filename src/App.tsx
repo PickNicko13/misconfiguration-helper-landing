@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { ThemeControls } from './components/ThemeControls';
 import { SSULogo } from './components/SSULogo';
+import { LanguageSwitcher } from './components/LanguageSwitcher';
 
 function App() {
   const { t } = useTranslation();
@@ -13,7 +14,10 @@ function App() {
             <SSULogo className="w-8 h-8" />
             <span className="tracking-tight uppercase">{t('header.title')}</span>
           </h1>
-          <ThemeControls />
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher />
+            <ThemeControls />
+          </div>
         </div>
       </header>
 
