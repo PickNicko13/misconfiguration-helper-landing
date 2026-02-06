@@ -15,6 +15,15 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - SEO Meta Tags & Open Graph
 - Desktop-first Responsive Design
 - Accessibility (ARIA, Alt text)
+- 
+## Stage 3: Thesis Content (Ukrainian)
+
+- Hero Section with Project Title
+- Keywords & Actuality
+- Research Goal & Tasks
+- Methodology & Expected Results
+- Contacts (Sumy State University)
+- Full Ukrainian Content (No i18n yet)
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
