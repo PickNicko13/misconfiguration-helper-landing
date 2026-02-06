@@ -35,20 +35,33 @@ function App() {
           </div>
         </section>
 
-        <section className="bg-white py-12 md:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-12">Основні можливості</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((item) => (
-                <div key={item} className="p-6 border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg mb-4 flex items-center justify-center text-blue-600 font-bold">
-                    {item}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Фіча #{item}</h3>
-                  <p className="text-gray-600">Опис функціоналу placeholder text. Lorem ipsum dolor sit amet.</p>
-                </div>
-              ))}
-            </div>
+        <section className="bg-white py-16 md:py-24 border-y border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <article>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Ключові слова</h2>
+              <div className="flex flex-wrap gap-3">
+                {["кібербезпека", "Python", "CLI", "misconfiguration", "vulnerability scanning", "CORS", "port scanning", "fuzzing"].map((keyword) => (
+                  <span key={keyword} className="px-4 py-2 bg-blue-50 text-blue-800 rounded-full text-sm font-medium border border-blue-100">
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+            </article>
+
+            <article className="prose prose-lg text-gray-600 max-w-none">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 not-prose">Актуальність теми</h2>
+              <p>
+                Зростання кількості кібератак через неправильно налаштовані системи стає однією з критичних проблем сучасної IT-інфраструктури.
+                Згідно з звітами OWASP, Security Misconfiguration стабільно входить до топ-10 вразливостей веб-застосунків.
+              </p>
+              <p className="mt-4">
+                Існуючі інструменти часто є занадто складними для швидкого аудиту або вимагають значних ресурсів.
+                Розробка легкого, модульного інструменту для виявлення типових помилок конфігурації дозволить системним адміністраторам
+                та DevOps-інженерам оперативно знаходити та усувати вразливості на ранніх етапах.
+              </p>
+            </article>
+
           </div>
         </section>
       </main>
