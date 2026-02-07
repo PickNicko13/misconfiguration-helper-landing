@@ -137,14 +137,14 @@ function App() {
             </article>
 
             <article className="pt-12 border-t border-[var(--color-bg-soft)]">
-              <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+              <div className="flex flex-col md:flex-row justify-around items-center gap-8">
                 <div className="space-y-4 text-center md:text-left">
                   <h2 className="text-2xl font-black uppercase tracking-tighter">{t('materials.title')}</h2>
                   <a
                     href="https://github.com/PickNicko13/misconfiguration-helper"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-fg-primary)] text-[var(--color-bg-hard)] font-black uppercase text-sm hover:invert transition-all active:translate-y-1"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-fg-primary)] text-[var(--color-bg-hard)] font-black uppercase text-sm hover:bg-[var(--color-bg-hard)] hover:text-[var(--color-fg-primary)] hover:outline hover:outline-2 hover:outline-[var(--color-fg-primary)] transition-all active:translate-y-1"
                   >
                     {t('materials.githubLink')}
                   </a>
